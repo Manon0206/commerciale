@@ -9,7 +9,7 @@ class Commercial
     private Categorie categorie;
 
     public Commercial(string nom, string prenom, int anneeNaissance, Categorie categorie)
-    {
+    { 
         this.nom = nom;
         this.Prenom = prenom;
         this.anneeNaissance = anneeNaissance;
