@@ -3,22 +3,26 @@
     internal class Service
     {
             private string nomService;
-            private Commercial[] commerciaux;
+            private Commercial[] tableau;
             private int effectif;
 
-            public Service(string nomService)
+        public string NomService { get => nomService; set => nomService = value; }
+        internal Commercial[] Tableau { get => tableau; set => tableau = value; }
+        public int Effectif { get => effectif; set => effectif = value; }
+
+        public Service(string nomService)
             {
-                this.nomService = nomService;
-                commerciaux = new Commercial[10];
-                effectif = 0;
+                this.NomService = nomService;
+                Tableau = new Commercial[10];
+                Effectif = 0;
             }
 
             public void AjouterCom(Commercial c)
             {
-                if (effectif < 10)
+                if (Effectif < 10)
                 {
-                    commerciaux[effectif] = c;
-                    effectif++;
+                    Tableau[Effectif] = c;
+                    Effectif++;
                 }
                 else
                 {
@@ -28,10 +32,10 @@
 
             public void AfficherCommerciaux()
             {
-                Console.WriteLine($"Commerciaux du service {nomService}:");
-                for (int i = 0; i < effectif; i++)
+                Console.WriteLine($"Commerciaux du service {NomService}:");
+                for (int i = 0; i < Effectif; i++)
                 {
-                    Console.WriteLine(commerciaux[i]);
+                    Console.WriteLine(Tableau[i]);
                 }
             }
     }

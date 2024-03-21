@@ -3,15 +3,25 @@
 class Program
 {
     static void Main(string[] args)
-    {
-        Categorie salarie = new Categorie("001", "Salarie");
-        Categorie independant = new Categorie("002", "Indépendant");
+    {        
+        Categorie cat1 = new Categorie("001", "Salarie");
+        Categorie cat2 = new Categorie("002", "Indépendant");
 
-        Commercial com1 = new Commercial("Chabault", "Mathis", 1975, salarie);
-        Commercial com2 = new Commercial("Boulec", "Tom", 1985, independant);
-        Commercial com3 = new Commercial("Habert", "Manon", 1977, salarie);
+        Commercial com1 = new Commercial("Chabault", "Mathis", 1975, cat2);
+        Commercial com2 = new Commercial("Boulec", "Tom", 1985, cat1);
+        Commercial com3 = new Commercial("Habert", "Manon", 1977, cat2);
 
         Console.WriteLine("Informations des commerciaux :");
+        Console.WriteLine(com1);
+        Console.WriteLine(com2);
+        Console.WriteLine(com3);
+
+        Console.WriteLine("\n Commerciaux du service National :");
+        Console.WriteLine(com1);
+        Console.WriteLine(com2);
+        Console.WriteLine(com3);
+
+        Console.WriteLine("\n Commerciaux du service International :");
         Console.WriteLine(com1);
         Console.WriteLine(com2);
         Console.WriteLine(com3);
@@ -27,11 +37,5 @@ class Program
 
         international.AjouterCom(com2);
         international.AjouterCom(com3);
-
-        Console.WriteLine("\nCommerciaux du service National :");
-        national.AfficherCommerciaux();
-
-        Console.WriteLine("\nCommerciaux du service International :");
-        international.AfficherCommerciaux();
     }
 }

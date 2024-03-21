@@ -28,7 +28,7 @@ class Commercial
 
     public override string ToString()
     {
-        return $"Nom: {nom}, Prénom: {Prenom}, Âge: {CalculAge()}, Catégorie: {categorie}";
+        return "Nom: " + nom + "\n Prénom:" + Prenom + "\n Âge: " + CalculAge() + " \n Catégorie: " + this.categorie;
     }
 
     public void Compare(Commercial c)
