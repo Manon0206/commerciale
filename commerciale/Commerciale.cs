@@ -11,28 +11,15 @@ class Commercial
     public Commercial(string nom, string prenom, int anneeNaissance, Categorie categorie)
     {
         this.nom = nom;
-        this.prenom = prenom;
+        this.Prenom = prenom;
         this.anneeNaissance = anneeNaissance;
         this.categorie = categorie;
     }
 
-    public string Nom
-    {
-        get { return nom; }
-        set { nom = value; }
-    }
-
-    public string Prenom
-    {
-        get { return prenom; }
-        set { prenom = value; }
-    }
-
-    public int AnneeNaissance
-    {
-        get { return anneeNaissance; }
-        set { anneeNaissance = value; }
-    }
+    public string Nom { get => nom; set => nom = value; }
+    public string Prenom { get => prenom; set => prenom = value; }
+    public int AnneeNaissance { get => anneeNaissance; set => anneeNaissance = value; }
+    public Categorie Categorie { get => categorie; set => categorie = value; }
 
     public int CalculAge()
     {
@@ -41,7 +28,7 @@ class Commercial
 
     public override string ToString()
     {
-        return $"Nom: {nom}, Prénom: {prenom}, Âge: {CalculAge()}, Catégorie: {categorie}";
+        return $"Nom: {nom}, Prénom: {Prenom}, Âge: {CalculAge()}, Catégorie: {categorie}";
     }
 
     public void Compare(Commercial c)
