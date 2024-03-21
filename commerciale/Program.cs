@@ -1,4 +1,6 @@
-﻿class Program
+﻿using commerciale;
+
+class Program
 {
     static void Main(string[] args)
     {
