@@ -3,13 +3,16 @@
 class Program
 {
     static void Main(string[] args)
-    {        
+    {
         Categorie cat1 = new Categorie("001", "Salarie");
         Categorie cat2 = new Categorie("002", "Indépendant");
 
-        Commercial com1 = new Commercial("Chabault", "Mathis", 1975, cat2);
-        Commercial com2 = new Commercial("Boulec", "Tom", 1985, cat1);
-        Commercial com3 = new Commercial("Habert", "Manon", 1977, cat2);
+        Service national = new Service("National");
+        Service international = new Service("International");
+
+        Commercial com1 = new Commercial("Chabault", "Mathis", 1975, cat2 , national);
+        Commercial com2 = new Commercial("Boulec", "Tom", 1985, cat1, international);
+        Commercial com3 = new Commercial("Kalemba", "Exocé", 1977, cat2, national);
 
         Console.WriteLine("Informations des commerciaux :");
         Console.WriteLine(com1);
@@ -27,9 +30,6 @@ class Program
         Console.WriteLine(com3);
 
         com1.Compare(com2);
-
-        Service national = new Service("National");
-        Service international = new Service("International");
 
         national.AjouterCom(com1);
         national.AjouterCom(com2);
