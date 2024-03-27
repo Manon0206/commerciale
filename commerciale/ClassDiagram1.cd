@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="commerciale.Service">
-    <Position X="3.5" Y="1" Width="1.5" />
+    <Position X="4" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAEAAAABkAAAAAAAAAACAAAAggAAIAAAAAAAAA=</HashCode>
       <FileName>Service.cs</FileName>

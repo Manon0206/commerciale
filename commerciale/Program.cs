@@ -19,16 +19,6 @@ class Program
         Console.WriteLine(com2);
         Console.WriteLine(com3);
 
-        Console.WriteLine("\n Commerciaux du service National :");
-        Console.WriteLine(com1);
-        Console.WriteLine(com2);
-        Console.WriteLine(com3);
-
-        Console.WriteLine("\n Commerciaux du service International :");
-        Console.WriteLine(com1);
-        Console.WriteLine(com2);
-        Console.WriteLine(com3);
-
         com1.Compare(com2);
 
         national.AjouterCom(com1);
